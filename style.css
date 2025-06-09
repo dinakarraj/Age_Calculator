@@ -1,0 +1,308 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root 
+{
+    --Purple_500: hsl(259, 100%, 65%);
+    --Red_400: hsl(0, 100%, 67%);
+
+
+    --White: hsl(0, 100%, 100%);
+    --Grey_100: hsl(0, 0%, 94%);
+    --Grey_200: hsl(0, 0%, 86%);
+    --Grey_500: hsl(0, 1%, 44%);
+    --Black: hsl(0, 0%, 0%);
+}
+body 
+{
+    
+    background-color: var(--Grey_200);
+}
+.date_inputs 
+{
+    display: flex;
+    flex-direction: row;
+}
+.date_group
+{
+    display: flex;
+    flex-direction: column;
+}
+.date_group label
+{
+    color: var(--Grey_500);
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+ button
+{
+    cursor: pointer;
+    background-color: var(--Purple_500);
+}
+main 
+{
+    background-color: var(--White);
+    padding:20px;
+    margin: 40px 20px;
+    border-radius: 30px 30px 80px 30px;
+}
+h1 span 
+{
+    color: var(--Purple_500);
+}
+.error_msg
+{
+    color: var(--Red_400);
+    font-style: italic;
+    display:none;
+}
+.divider hr {
+  flex-grow: 1;        
+  border: none;
+  height: 0.5px;
+  background-color: var(--Grey_500); 
+  
+}
+.right_line 
+{
+    display: none;
+}
+@media (width<500px)
+{
+    .right_line 
+    {
+        display: block;
+    }
+    .date_inputs
+    {
+        justify-content: space-around;
+        gap: 10px;
+        margin-top:70px;
+    }
+    .date_group
+    {
+        gap:10px;
+    }
+    .date_group input 
+    {
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 10px;
+        border:1px solid var(--Grey_500);
+        font-size:20px;
+        font-weight: bolder;
+    }
+    .divider 
+    {
+        margin-top:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    button 
+    {
+        width:90px;
+        height: 90px;
+        border-radius: 50%;
+        border: none;
+        padding: 20px;
+    }
+    .result
+    {
+        margin-left:30px;
+        margin-top: 30px;
+    }
+    h1 
+    {
+        font-size: 50px;
+        font-style: italic;
+    }
+    h1 span 
+    {
+        font-size:50px;
+        font-weight: bolder;
+        letter-spacing: 3px;
+    }
+}
+@media (width<=380px) 
+{
+    .date_inputs
+    {
+        margin-left: -10px;
+    }
+    .date_group input 
+    {
+        width:80px;
+        height: 60px;
+
+    } 
+    .result
+    {
+        margin-left: -10px;
+    }
+    
+}
+
+/* tablets styling */
+@media (min-width: 500px) and (max-width:1000px)
+{
+    main 
+    {
+        
+        max-width: 550px;
+        margin-left: 100px;
+        margin-top: 80px;
+    }
+    .date_inputs
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+
+    }
+    .date_group
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .date_group input 
+    {
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 10px;
+        border:1px solid var(--Grey_500);
+        font-size:20px;
+        font-weight: bolder;
+    }
+    .divider 
+    {
+        margin-top:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    button 
+    {
+        width:90px;
+        height: 90px;
+        border-radius: 50%;
+        border: none;
+        padding: 20px;
+    }
+    .result
+    {
+        margin-left:30px;
+        margin-top: 30px;
+    }
+    h1 
+    {
+        font-size: 50px;
+        font-style: italic;
+    }
+    h1 span 
+    {
+        font-size:50px;
+        font-weight: bolder;
+        letter-spacing: 3px;
+    }
+}
+/* when growing with sizes of screens from 500 to 768px only problem is with width of input label width try to fix it */
+/* below one for laptop screens */
+@media (width>=1000px)
+{
+    main 
+    {
+        margin-top:80px;
+        margin-left: 100px;
+        max-width: 800px;
+    }
+    .date_group
+    {
+        margin-left: 20px;
+    }
+    .date_group input 
+    {
+        width: 200px;
+        height: 65px;
+    }
+    /* below code was exact copy paste from tablet media queries with few desired changes */
+    .date_inputs
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .date_group
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .date_group input 
+    {
+        /* width: 100px;
+        height: 50px; */
+        border-radius: 5px;
+        padding: 10px;
+        border:1px solid var(--Grey_500);
+        font-size:20px;
+        font-weight: bolder;
+    }
+    .divider 
+    {
+        margin-top:60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    button 
+    {
+        width:90px;
+        height: 90px;
+        border-radius: 50%;
+        border: none;
+        padding: 20px;
+    }
+    .result
+    {
+        margin-left:30px;
+        margin-top: 30px;
+    }
+    h1 
+    {
+        font-size: 65px;
+        font-style: italic;
+    }
+    h1 span 
+    {
+        font-size:65px;
+        font-weight: bolder;
+        letter-spacing: 3px;
+    }
+}
+@media (width>=1300px)
+{
+    main
+    {
+        margin-left: 340px;
+    }
+}
+.error_styling
+{
+    border-color: var(--Red_400) !important;
+}
+.error_label 
+{
+    color: var(--Red_400) !important;
+}
